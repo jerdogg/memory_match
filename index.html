@@ -1,0 +1,83 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
+
+</head>
+
+<body>
+  <!-- bootstrap stuff -->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Memory Matcher Game</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="#">Home</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Click me: <my-element happy></my-element> -->
+
+  <div id="header">
+    <button id="new_game">New Game</button>
+    <select id="dificulty">
+      <option value="8">Easy 1</option>
+      <option value="10">Easy 2</option>
+      <option value="12">Med 1</option>
+      <option value="16">Med 2</option>
+      <option value="20">Hard 1</option>
+      <option value="36">Hard 1</option>
+    </select>
+  </div>
+  <hr>
+
+
+  <script type="text/template" id="card_template">
+    <div class="flip-container">
+      <div class="flipper">
+        <div class="front"></div>
+        <div class="back">
+          <svg width="100%" height="100%">
+            <circle cx="50%" cy="50%" r="16%" fill="#aeaeae" />
+            <text class="jer" x="50%" y="50%" text-anchor="middle" fill="black" font-size="275%" font-family="Arial" dy=".3em">
+              digit
+            </text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <div class="board"></div>
+
+  <!-- <script>var template = document.getElementById("thingy").innerHTML -->
+  <!-- <script>document.write(template.replace(/%s/, 88))</script> -->
+
+  <div class="test"></div>
+
+  <nav class="navbar navbar-inverse navbar-fixed-bottom">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+      </div>
+    </div>
+  </nav>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="main.js"></script>
+
+</body>
+
+</html>

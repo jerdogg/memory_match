@@ -1,0 +1,76 @@
+html, body {
+	height: 100%;
+}
+
+/* allow top container to have a perspective outside of bounds */
+.flip-container {
+  perspective: 1000px;
+  visibility: hidden;
+  margin:5px;  /* needed for flex table gap */
+}
+
+.flip-container, .front, .back {
+  width: 225px;
+  height: 125px;
+}
+
+
+	/* flip the pane when hovered */
+	/* .flip-container:hover .flipper {
+    transform: rotateY(180deg);
+  } */
+  
+  /* I don't understand this */
+  .flipper.rotated {
+    transform: rotateY(180deg);
+  }
+
+  /* parent.this-class .child */
+  .flip-container.found .back {
+    transition-delay: 0.5s;
+    background-color: lightyellow;
+  }
+
+  /* container of the card to be flipped */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+  position: relative;
+}
+
+/* intial state */
+.front {
+  z-index: 2;
+  backface-visibility: hidden;
+  position: absolute;
+  border-style: solid;
+  border-width: 2px;
+  background-image: url('Pirate_skull.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* inital state */
+.back {
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  position: absolute;
+  border-style: solid;
+  border-width: 2px;
+  background-image: url('Skeletons_frame.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 120% 120%;
+  background-position: center;
+  text-align: center;
+}
+
+#header {
+  text-align: center;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  padding:5px; /* needed for flex table gap */
+}
